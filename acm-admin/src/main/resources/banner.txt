@@ -1,0 +1,2 @@
+Application Version: ${acm.version}
+Spring Boot Version: ${spring-boot.version}

@@ -9,7 +9,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="code"    column="code"    />
         <result property="specificName"    column="specific_name"    />
         <result property="latinName"    column="latin_name"    />
-        <result property="coordinate"    column="coordinate"    />
         <result property="longitude"    column="longitude"    />
         <result property="latitude"    column="latitude"    />
         <result property="elevation"    column="elevation"    />
@@ -30,7 +29,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </resultMap>
 
     <sql id="selectBizGermplasmVo">
-        select id, code, specific_name, latin_name, coordinate, longitude, latitude, elevation, life_form, medicinal_name, collection_address, collection_time, characteristics, preservation_location, plant_photograph, voucher_specimen, remark, create_by, update_by, create_time, update_time, del_flag from biz_germplasm
+        select id, code, specific_name, latin_name, longitude, latitude, elevation, life_form, medicinal_name, collection_address, collection_time, characteristics, preservation_location, plant_photograph, voucher_specimen, remark, create_by, update_by, create_time, update_time, del_flag from biz_germplasm
     </sql>
 
     <select id="selectBizGermplasmList" parameterType="com.acm.biz.domain.BizGermplasm" resultMap="BizGermplasmResult">
@@ -53,7 +52,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="code != null and code != ''">code,</if>
             <if test="specificName != null and specificName != ''">specific_name,</if>
             <if test="latinName != null and latinName != ''">latin_name,</if>
-            <if test="coordinate != null">coordinate,</if>
             <if test="longitude != null">longitude,</if>
             <if test="latitude != null">latitude,</if>
             <if test="elevation != null">elevation,</if>
@@ -76,7 +74,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="code != null and code != ''">#{code},</if>
             <if test="specificName != null and specificName != ''">#{specificName},</if>
             <if test="latinName != null and latinName != ''">#{latinName},</if>
-            <if test="coordinate != null">#{coordinate},</if>
             <if test="longitude != null">#{longitude},</if>
             <if test="latitude != null">#{latitude},</if>
             <if test="elevation != null">#{elevation},</if>
@@ -103,7 +100,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="code != null and code != ''">code = #{code},</if>
             <if test="specificName != null and specificName != ''">specific_name = #{specificName},</if>
             <if test="latinName != null and latinName != ''">latin_name = #{latinName},</if>
-            <if test="coordinate != null">coordinate = #{coordinate},</if>
             <if test="longitude != null">longitude = #{longitude},</if>
             <if test="latitude != null">latitude = #{latitude},</if>
             <if test="elevation != null">elevation = #{elevation},</if>
